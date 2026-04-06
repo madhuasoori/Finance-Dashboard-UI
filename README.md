@@ -6,33 +6,32 @@ A premium, institutional-grade finance dashboard built with **React** and **Vite
 
 ## 📸 Visual Previews & Themes
 
-The application features a sophisticated dual-theme system synchronized with user roles. All screenshots are available in the `./screenshots/` directory.
+The application features a sophisticated dual-role system (Viewer vs Admin) with synchronized themes. All screenshots are available in the `./screenshots/` directory.
 
 > [!TIP]
-> **Role-Based Themes**:
-> - **Dark Mode**: Optimized for the **Universal User** experience, focusing on high-readability financial monitoring.
-> - **Light Mode**: Tailored for the **Institutional Admin**, providing a clean, high-precision environment for wealth management.
-> - *Users can toggle between themes at any time via the header icon.*
+> **Role-Based Views**:
+> - **Viewer (Dark Mode)**: optimized for high-readability financial monitoring and data analysis.
+> - **Admin (Light Mode)**: provides a clean, high-precision environment for wealth management and full CRUD access.
 
 ### 🏛️ Dashboard Overview
-| Dark Mode (User) | Light Mode (Admin) |
+| Admin View | Ledger Preview |
 | :--- | :--- |
-| ![Dashboard Dark](./screenshots/dashboard_dark_user.png) | ![Dashboard Light](./screenshots/dashboard_light_admin.png) |
+| ![Dashboard Admin](./screenshots/Dashboard%20-%20Admin.png) | ![Ledger Preview](./screenshots/Transaction%20-%20Admin.png) |
 
 ### 📒 Financial Ledger
-| Dark Mode (User) | Light Mode (Admin) |
+| Viewer View | Admin View |
 | :--- | :--- |
-| ![Ledger Dark](./screenshots/ledger_dark_user.png) | ![Ledger Light](./screenshots/ledger_light_admin.png) |
+| ![Ledger Viewer](./screenshots/Transactions%20-%20Viewer.png) | ![Ledger Admin](./screenshots/Transaction%20-%20Admin.png) |
 
 ### 🧠 Strategic Insights
-| Dark Mode (User) | Light Mode (Admin) |
+| Viewer View | Admin View |
 | :--- | :--- |
-| ![Insights Dark](./screenshots/insights_dark_user.png) | ![Insights Light](./screenshots/insights_light_admin.png) |
+| ![Insights Viewer](./screenshots/Insights%20-%20Viewer.png) | ![Insights Admin](./screenshots/Insights%20-%20Admin.png) |
 
 ### 👤 User Profile
-| Dark Mode (User) | Light Mode (Admin) |
+| Viewer View | Admin View |
 | :--- | :--- |
-| ![Profile Dark](./screenshots/profile_dark_user.png) | ![Profile Light](./screenshots/profile_light_admin.png) |
+| ![Profile Viewer](./screenshots/Profile%20-%20Viewer.png) | ![Profile Admin](./screenshots/Profile%20-%20Admin.png) |
 
 ---
 
