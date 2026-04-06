@@ -269,6 +269,17 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
           {children}
         </div>
       </main>
+
+      {/* Mobile FAB — Add Transaction (admin only, visible on mobile) */}
+      {role === 'admin' && (
+        <button
+          className="mobile-fab"
+          onClick={() => setAddModalOpen(true)}
+        >
+          <span style={{ fontSize: '1.2rem', fontWeight: 400, lineHeight: 1 }}>+</span>
+          Add Transaction
+        </button>
+      )}
     </div>
   );
 };
