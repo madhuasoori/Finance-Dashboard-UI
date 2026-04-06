@@ -91,9 +91,69 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
           {/* Removed New Report button */}
         </nav>
 
+        {/* Mobile-only: Account / Card Switcher + Role Toggle */}
+        <div className="mobile-only" style={{ flexDirection: 'column', marginTop: '2rem', gap: '1.25rem' }}>
+
+          {/* Card Switcher */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--text-tertiary)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              Active Account
+            </div>
+            <div style={{ position: 'relative', background: 'var(--bg-panel-hover)', borderRadius: '10px', padding: '0.75rem 1rem' }}>
+              <select
+                value={activeCardId}
+                onChange={(e) => setActiveCardId(e.target.value)}
+                style={{
+                  width: '100%', background: 'transparent', border: 'none',
+                  color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 600,
+                  cursor: 'pointer', appearance: 'none', outline: 'none',
+                  paddingRight: '1.5rem'
+                }}
+              >
+                {cards.map(card => (
+                  <option key={card.id} value={card.id} style={{ background: 'var(--bg-panel)', color: 'var(--text-primary)' }}>
+                    {card.name} {card.last4 ? `(**** ${card.last4})` : ''}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown size={14} style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'var(--text-tertiary)' }} />
+            </div>
+          </div>
+
+          {/* Role Toggle */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--text-tertiary)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              Access Role
+            </div>
+            <div style={{ display: 'flex', background: 'var(--bg-panel-hover)', borderRadius: '10px', padding: '0.25rem' }}>
+              {['viewer', 'admin'].map(r => (
+                <button
+                  key={r}
+                  onClick={() => setRole(r)}
+                  style={{
+                    flex: 1, padding: '0.6rem', fontSize: '0.85rem', fontWeight: 600,
+                    border: 'none', borderRadius: '8px', cursor: 'pointer', textTransform: 'capitalize',
+                    background: role === r ? 'var(--bg-panel)' : 'transparent',
+                    color: role === r ? 'var(--text-primary)' : 'var(--text-secondary)',
+                    boxShadow: role === r ? 'var(--shadow-sm)' : 'none',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
         {role === 'admin' && (
           <div style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <button className="btn btn-black" style={{ width: '100%', padding: '0.85rem' }} onClick={() => setAddModalOpen(true)}>
+            <button
+              className="btn btn-black"
+              style={{ width: '100%', padding: '0.85rem' }}
+              onClick={() => { setIsMobileMenuOpen(false); setAddModalOpen(true); }}
+            >
               <span style={{ fontSize: '1.1rem', marginRight: '0.5rem', fontWeight: 400 }}>+</span> Add Transaction
             </button>
           </div>
