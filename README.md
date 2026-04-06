@@ -16,22 +16,27 @@ The application features a sophisticated dual-role system (Viewer vs Admin) with
 ### 🏛️ Dashboard Overview
 | Admin View | Ledger Preview |
 | :--- | :--- |
-| ![Dashboard Admin](./screenshots/Dashboard%20-%20Admin.png) | ![Ledger Preview](./screenshots/Transaction%20-%20Admin.png) |
+| ![Dashboard Admin](screenshots/Dashboard_Admin.png) | ![Ledger Preview](screenshots/Transaction_Admin.png) |
 
 ### 📒 Financial Ledger
 | Viewer View | Admin View |
 | :--- | :--- |
-| ![Ledger Viewer](./screenshots/Transactions%20-%20Viewer.png) | ![Ledger Admin](./screenshots/Transaction%20-%20Admin.png) |
+| ![Ledger Viewer](screenshots/Transactions_Viewer.png) | ![Ledger Admin](screenshots/Transaction_Admin.png) |
 
 ### 🧠 Strategic Insights
 | Viewer View | Admin View |
 | :--- | :--- |
-| ![Insights Viewer](./screenshots/Insights%20-%20Viewer.png) | ![Insights Admin](./screenshots/Insights%20-%20Admin.png) |
+| ![Insights Viewer](screenshots/Insights_Viewer.png) | ![Insights Admin](screenshots/Insights_Admin.png) |
 
 ### 👤 User Profile
 | Viewer View | Admin View |
 | :--- | :--- |
-| ![Profile Viewer](./screenshots/Profile%20-%20Viewer.png) | ![Profile Admin](./screenshots/Profile%20-%20Admin.png) |
+| ![Profile Viewer](screenshots/Profile_Viewer.png) | ![Profile Admin](screenshots/Profile_Admin.png) |
+
+### ⚙️ Settings
+| Settings View |
+| :--- |
+| ![Settings](screenshots/Settings.png) |
 
 ---
 
