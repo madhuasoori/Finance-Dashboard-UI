@@ -115,7 +115,7 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
           </div>
           
           {/* Center: Card Switcher & Role Toggle */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div className="header-center">
             {/* Card Switcher */}
             <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg-panel-hover)', padding: '0.35rem 0.75rem', borderRadius: '100px', cursor: 'pointer' }}>
               <select 
@@ -137,24 +137,24 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
 
             {/* Role Toggle */}
             <div style={{ display: 'flex', background: 'var(--bg-panel-hover)', borderRadius: '100px', padding: '0.25rem' }}>
-            {['viewer', 'admin'].map(r => (
-              <button 
-                key={r}
-                onClick={() => setRole(r)}
-                style={{
-                  padding: '0.35rem 1.25rem', fontSize: '0.8rem', fontWeight: 600, border: 'none',
-                  borderRadius: '100px', cursor: 'pointer', textTransform: 'capitalize',
-                  background: role === r ? 'var(--bg-panel)' : 'transparent',
-                  color: role === r ? 'var(--text-primary)' : 'var(--text-secondary)',
-                  boxShadow: role === r ? 'var(--shadow-sm)' : 'none',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                {r}
-              </button>
-            ))}
+              {['viewer', 'admin'].map(r => (
+                <button 
+                  key={r}
+                  onClick={() => setRole(r)}
+                  style={{
+                    padding: '0.35rem 1.25rem', fontSize: '0.8rem', fontWeight: 600, border: 'none',
+                    borderRadius: '100px', cursor: 'pointer', textTransform: 'capitalize',
+                    background: role === r ? 'var(--bg-panel)' : 'transparent',
+                    color: role === r ? 'var(--text-primary)' : 'var(--text-secondary)',
+                    boxShadow: role === r ? 'var(--shadow-sm)' : 'none',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
           {/* Right: Actions */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
@@ -177,11 +177,7 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
                       style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1000 }} 
                       onClick={() => setIsNotificationsOpen(false)}
                     ></div>
-                    <div style={{ 
-                      position: 'absolute', top: 'calc(100% + 0.5rem)', right: '-10px', width: '380px', 
-                      background: 'var(--bg-panel)', border: '1px solid var(--border-color)', borderRadius: '12px',
-                      boxShadow: 'var(--shadow-lg)', zIndex: 1001, overflow: 'hidden', animation: 'slideDown 0.2s ease-out'
-                    }}>
+                    <div className="notification-dropdown">
                       <div style={{ padding: '1.25rem', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 700 }}>Notifications</h4>
                         <span className="badge badge-tech" style={{ fontSize: '0.65rem' }}>3 NEW</span>
@@ -247,7 +243,7 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
               </button>
             </div>
 
-            <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column' }}>
+            <div className="header-user-info" style={{ textAlign: 'right', display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>{userProfile.name}</span>
               <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--brand-green)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{role}</span>
             </div>

@@ -99,7 +99,7 @@ export const Dashboard = ({ setActiveView }) => {
         {/* Dark Card */}
         <div className="card" style={{ backgroundColor: 'var(--dark-card-bg)', color: 'white', padding: '1.5rem 2rem', borderRadius: '12px' }}>
           <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '0.5rem' }}>Total Assets</div>
-          <div style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem', letterSpacing: '-0.5px' }}>
+          <div style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', fontWeight: 700, marginBottom: '1.5rem', letterSpacing: '-0.5px', wordBreak: 'break-word' }}>
             {liveTotalAsset.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', color: '#10b981', fontSize: '0.85rem', fontWeight: 600 }}>
@@ -119,7 +119,7 @@ export const Dashboard = ({ setActiveView }) => {
           </div>
           <div style={{ marginTop: '2rem' }}>
             <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>Monthly Income</div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 700 }}>
+            <div style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', fontWeight: 700 }}>
               {totalIncome.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })}
             </div>
           </div>
@@ -137,7 +137,7 @@ export const Dashboard = ({ setActiveView }) => {
           </div>
           <div style={{ marginTop: '2rem' }}>
             <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>Monthly Expenses</div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 700 }}>
+            <div style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', fontWeight: 700 }}>
               {totalExpense.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })}
             </div>
           </div>

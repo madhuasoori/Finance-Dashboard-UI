@@ -175,13 +175,13 @@ export const Transactions = () => {
       />
 
       {/* Header and top controls */}
-      <div className="page-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+      <div className="page-header transactions-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div>
           <h1 className="page-title" style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>Ledger</h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>Comprehensive history of your financial movements.</p>
         </div>
         
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <div className="transactions-controls" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <div style={{ display: 'flex', background: 'var(--bg-panel-hover)', borderRadius: '100px', padding: '0.25rem' }}>
             {['all', 'income', 'expenses'].map(ft => (
               <button 
@@ -358,7 +358,7 @@ export const Transactions = () => {
         <div style={{ background: 'linear-gradient(90deg, var(--dark-card-bg) 50%, #172554 100%)', padding: '2rem', borderRadius: '12px', color: '#fff' }}>
           <div style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '1rem' }}>Net Cash Flow (Monthly)</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ fontSize: '2.5rem', fontWeight: 700, letterSpacing: '-0.5px' }}>+₹1,54,200.00</div>
+            <div style={{ fontSize: '2.5rem', fontWeight: 700, letterSpacing: '-0.5px' }} className="cashflow-value">+₹1,54,200.00</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--success)', fontSize: '0.85rem', fontWeight: 600 }}>
               <TrendingUp size={16} /> 12.5%
             </div>

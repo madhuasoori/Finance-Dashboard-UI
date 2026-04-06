@@ -41,25 +41,24 @@ export const Settings = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           
           {/* Theme Settings */}
-          <div className="flex-between" style={{ paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
+          <div className="settings-row" style={{ paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
             <div>
               <div style={{ fontWeight: 600 }}>Appearance Mode</div>
               <div className="text-muted">Toggle between light and premium dark themes.</div>
             </div>
-            <button className="btn btn-outline" onClick={toggleTheme} style={{ width: '150px', justifyContent: 'center' }}>
+            <button className="btn btn-outline settings-action" onClick={toggleTheme}>
               {theme === 'dark' ? <><Sun size={18} /> Light Mode</> : <><Moon size={18} /> Dark Mode</>}
             </button>
           </div>
 
           {/* Role Settings */}
-          <div className="flex-between" style={{ paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
+          <div className="settings-row" style={{ paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
             <div>
               <div style={{ fontWeight: 600 }}>Active Role <span className="badge badge-income" style={{ marginLeft: '0.5rem' }}>Simulation</span></div>
               <div className="text-muted">Switch between Viewer (readonly) and Admin (edit/add).</div>
             </div>
             <select 
-              className="form-input" 
-              style={{ width: '150px' }}
+              className="form-input settings-action" 
               value={role} 
               onChange={(e) => setRole(e.target.value)}
             >
@@ -69,25 +68,24 @@ export const Settings = () => {
           </div>
 
           {/* Export Data */}
-          <div className="flex-between" style={{ paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
+          <div className="settings-row" style={{ paddingBottom: '1.5rem', borderBottom: '1px solid var(--border-color)' }}>
             <div>
               <div style={{ fontWeight: 600 }}>Export Data</div>
               <div className="text-muted">Download all your records as a CSV file.</div>
             </div>
-            <button className="btn btn-success" style={{ width: '150px', justifyContent: 'center' }} onClick={handleExportCSV}>
+            <button className="btn btn-success settings-action" onClick={handleExportCSV}>
               <Download size={18} /> Export CSV
             </button>
           </div>
 
           {/* Danger Zone */}
-          <div className="flex-between">
+          <div className="settings-row">
             <div>
               <div style={{ fontWeight: 600, color: 'var(--danger)' }}>Danger Zone</div>
               <div className="text-muted">Permanently delete all transaction data.</div>
             </div>
             <button 
-              className="btn btn-danger" 
-              style={{ width: '150px', justifyContent: 'center' }}
+              className="btn btn-danger settings-action" 
               onClick={() => {
                 if (window.confirm("Are you sure? This cannot be undone.")) {
                   clearAllTransactions();

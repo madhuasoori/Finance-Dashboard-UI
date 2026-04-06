@@ -82,7 +82,7 @@ export const Insights = () => {
         background: 'linear-gradient(135deg, var(--dark-card-bg) 0%, #1e1b4b 100%)', color: '#fff',
         border: '1px solid rgba(255,255,255,0.1)'
       }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
+        <div className="insights-exec-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
               <Fingerprint size={20} color="var(--brand-green)" />

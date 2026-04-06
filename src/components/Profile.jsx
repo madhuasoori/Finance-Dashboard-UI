@@ -70,7 +70,7 @@ export const Profile = () => {
       <div className="card" style={{ padding: '3rem', borderRadius: '1.5rem', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: 0, right: 0, width: '300px', height: '100%', background: 'linear-gradient(225deg, var(--brand-light-green) 0%, transparent 70%)', opacity: 0.3 }}></div>
         
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', position: 'relative', zIndex: 1 }}>
+        <div className="profile-hero-inner" style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', position: 'relative', zIndex: 1 }}>
           <div style={{ 
             width: '120px', height: '120px', borderRadius: '50%', background: 'var(--brand-green)', 
             display: 'flex', alignItems: 'center', justifyContent: 'center', 
@@ -81,7 +81,7 @@ export const Profile = () => {
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-              <h1 className="page-title" style={{ fontSize: '2.5rem', margin: 0 }}>{userProfile.name}</h1>
+              <h1 className="page-title" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', margin: 0 }}>{userProfile.name}</h1>
               <span className="badge badge-tech" style={{ padding: '0.4rem 1rem' }}>PREMIUM CLIENT</span>
             </div>
             <div className="text-muted" style={{ fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
