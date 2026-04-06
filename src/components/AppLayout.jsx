@@ -102,7 +102,10 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
             <div style={{ position: 'relative', background: 'var(--bg-panel-hover)', borderRadius: '10px', padding: '0.75rem 1rem' }}>
               <select
                 value={activeCardId}
-                onChange={(e) => setActiveCardId(e.target.value)}
+                onChange={(e) => {
+                  setActiveCardId(e.target.value);
+                  setIsMobileMenuOpen(false);
+                }}
                 style={{
                   width: '100%', background: 'transparent', border: 'none',
                   color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 600,
@@ -129,7 +132,10 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
               {['viewer', 'admin'].map(r => (
                 <button
                   key={r}
-                  onClick={() => setRole(r)}
+                  onClick={() => {
+                    setRole(r);
+                    setIsMobileMenuOpen(false);
+                  }}
                   style={{
                     flex: 1, padding: '0.6rem', fontSize: '0.85rem', fontWeight: 600,
                     border: 'none', borderRadius: '8px', cursor: 'pointer', textTransform: 'capitalize',
@@ -149,10 +155,13 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
 
         {role === 'admin' && (
           <div style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <button
-              className="btn btn-black"
-              style={{ width: '100%', padding: '0.85rem' }}
-              onClick={() => { setIsMobileMenuOpen(false); setAddModalOpen(true); }}
+            <button 
+              className="btn btn-black" 
+              style={{ width: '100%', padding: '0.85rem' }} 
+              onClick={() => {
+                setAddModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               <span style={{ fontSize: '1.1rem', marginRight: '0.5rem', fontWeight: 400 }}>+</span> Add Transaction
             </button>
