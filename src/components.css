@@ -672,37 +672,3 @@
   .cashflow-value { font-size: 1.5rem !important; }
 }
 
-/* Mobile FAB — Add Transaction floating button */
-.mobile-fab {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile-fab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    z-index: 200;
-    background: var(--brand-green);
-    color: #fff;
-    border: none;
-    border-radius: 100px;
-    padding: 0.85rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    box-shadow: 0 4px 24px rgba(5, 150, 105, 0.45);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .mobile-fab:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(5, 150, 105, 0.55);
-  }
-  .mobile-fab:active {
-    transform: translateY(0);
-  }
-}

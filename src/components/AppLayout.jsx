@@ -92,7 +92,7 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
         </nav>
 
         {role === 'admin' && (
-          <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <button className="btn btn-black" style={{ width: '100%', padding: '0.85rem' }} onClick={() => setAddModalOpen(true)}>
               <span style={{ fontSize: '1.1rem', marginRight: '0.5rem', fontWeight: 400 }}>+</span> Add Transaction
             </button>
@@ -269,17 +269,6 @@ export const AppLayout = ({ activeView, setActiveView, children }) => {
           {children}
         </div>
       </main>
-
-      {/* Mobile FAB — Add Transaction (admin only, visible on mobile) */}
-      {role === 'admin' && (
-        <button
-          className="mobile-fab"
-          onClick={() => setAddModalOpen(true)}
-        >
-          <span style={{ fontSize: '1.2rem', fontWeight: 400, lineHeight: 1 }}>+</span>
-          Add Transaction
-        </button>
-      )}
     </div>
   );
 };
